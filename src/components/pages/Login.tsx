@@ -1,13 +1,6 @@
 import React, { memo, VFC } from "react";
-import {
-	Box,
-	Flex,
-	Heading,
-	Input,
-	Button,
-	Divider,
-	Stack,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Input, Divider, Stack } from "@chakra-ui/react";
+import { PrimaryButton } from "../atoms/button/PrimaryButton";
 
 export const Login: VFC = memo(() => {
 	return (
@@ -18,10 +11,8 @@ export const Login: VFC = memo(() => {
 				</Heading>
 				<Divider my={4} />
 				<Stack spacing={6} py={4} px={10}>
-					<Input placeholder="User ID" />
-					<Button bg="teal.400" color="white" _hover={{ opacity: 0.6 }}>
-						Login
-					</Button>
+					<Input placeholder="ユーザー ID" />
+					<PrimaryButton> ログイン</PrimaryButton>
 				</Stack>
 			</Box>
 		</Flex>
