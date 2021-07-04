@@ -1,4 +1,4 @@
-<img src="https://source.unsplash.com/random/1920x1080">
+<img src="https://source.unsplash.com/random">
 
 ![GitHub top language](https://img.shields.io/github/languages/top/Ryuyxx/prac-chakra-ts?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Ryuyxx/prac-chakra-ts?style=for-the-badge)
