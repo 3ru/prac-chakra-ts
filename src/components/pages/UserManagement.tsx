@@ -18,7 +18,6 @@ export const UserManagement: VFC = memo(() => {
 	const { getUsers, loading, users } = useAllUsers();
 	const { onSelectUser, selectedUser } = useSelectUser();
 	const { loginUser } = useLoginUser();
-	console.log(loginUser);
 
 	useEffect(() => {
 		getUsers();
@@ -38,7 +37,7 @@ export const UserManagement: VFC = memo(() => {
 					<Spinner />
 				</Center>
 			) : (
-				<Wrap p={{ base: 4, md: 10 }}>
+				<Wrap p={{ base: 4, md: 10 }} justify="space-around">
 					{users.map((user) => (
 						<WrapItem key={user.id} mx="auto">
 							<UserCard
@@ -52,7 +51,12 @@ export const UserManagement: VFC = memo(() => {
 					))}
 				</Wrap>
 			)}
-			<UserDetailModeal user={selectedUser} isOpen={isOpen} onClose={onClose} />
+			<UserDetailModeal
+				user={selectedUser}
+				isOpen={isOpen}
+				onClose={onClose}
+				isAdmin={loginUser?.isAdmin}
+			/>
 		</>
 	);
 });
